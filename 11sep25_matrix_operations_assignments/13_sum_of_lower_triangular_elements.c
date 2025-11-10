@@ -1,0 +1,31 @@
+#include <stdio.h>
+int main()
+{
+    int arr[10][10];
+    int x,y,i,j,k=1,a=0;
+    printf("Sum of The lower matrix\n");
+    printf("Enter row count :");
+    scanf("%d",&x);
+    printf("Enter column count :");
+    scanf("%d",&y);
+    printf("Enter the matrix elements \n");
+    for(i=0;i<x; i++)
+    {
+        for(j=0; j<y ; j++,k++)
+        {
+            printf("%d -value = ",k);
+            scanf("%d",&arr[i][j]);
+        }
+    }
+    for (i=0; i<x; i++)
+    {
+        for (j=0; j<y; j++)
+        {
+            if(i<j)
+                printf(" ");
+            else
+                a=a+arr[i][j];
+        }
+    }
+    printf("Sum of the lower triangle matrix %d\n",a);
+}
